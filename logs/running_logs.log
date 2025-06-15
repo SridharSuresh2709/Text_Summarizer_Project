@@ -1,0 +1,1062 @@
+[2025-06-14 17:26:16: INFO]: main: Logging setup complete. Ready to log messages.
+[2025-06-15 00:30:18: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:30:18: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:30:18: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:30:18: ERROR]: common: Error reading YAML file config\config.yaml: First argument must be mapping or iterable
+[2025-06-15 00:30:18: ERROR]: stage01_data_ingestion: Data Ingestion stage failed: First argument must be mapping or iterable
+[2025-06-15 00:30:18: ERROR]: main: First argument must be mapping or iterable
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 12, in <module>
+    data_ingestion_pipeline.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 38, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 19, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 14, in __init__
+    self.config = read_yaml(config_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\utils\common.py", line 27, in read_yaml
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\utils\common.py", line 24, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 259, in __init__
+    raise BoxValueError("First argument must be mapping or iterable")
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+[2025-06-15 00:31:44: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:31:44: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:31:44: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:31:44: ERROR]: stage01_data_ingestion: Data Ingestion stage failed: [Errno 2] No such file or directory: 'config\\params.yaml'
+[2025-06-15 00:31:44: ERROR]: main: [Errno 2] No such file or directory: 'config\\params.yaml'
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 12, in <module>
+    data_ingestion_pipeline.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 38, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 19, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 15, in __init__
+    self.params = read_yaml(params_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\utils\common.py", line 21, in read_yaml
+    with open(path_to_yaml, "r") as yaml_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\params.yaml'
+[2025-06-15 00:34:02: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:34:02: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:34:02: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:34:02: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:34:02: ERROR]: stage01_data_ingestion: Data Ingestion stage failed: isinstance() argument 2 cannot be a parameterized generic
+[2025-06-15 00:34:02: ERROR]: main: isinstance() argument 2 cannot be a parameterized generic
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 12, in <module>
+    data_ingestion_pipeline.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 38, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage01_data_ingestion.py", line 19, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 18, in __init__
+    create_directories([self.config.artifacts_root])
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\ensure\main.py", line 840, in __call__
+    if not isinstance(value, templ):
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isinstance() argument 2 cannot be a parameterized generic
+[2025-06-15 00:35:43: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:35:43: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:35:43: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:35:43: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:35:43: INFO]: common: created directory at: artifacts
+[2025-06-15 00:35:43: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 00:35:43: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 00:36:01: INFO]: data_ingestion: artifacts/data_ingestion/data.zip downloaded! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2421:2BF682:2CA7EC:6E3AE2:684DC808
+Accept-Ranges: bytes
+Date: Sat, 14 Jun 2025 19:05:46 GMT
+Via: 1.1 varnish
+X-Served-By: cache-hyd1100029-HYD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1749927945.316629,VS0,VE724
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 6fd1060ed43fa6325c9206969e38e1f49cb3ef9f
+Expires: Sat, 14 Jun 2025 19:10:46 GMT
+Source-Age: 0
+
+
+[2025-06-15 00:36:01: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 00:36:02: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 00:36:02: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:43:03: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:43:03: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:43:03: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:43:03: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:43:03: INFO]: common: created directory at: artifacts
+[2025-06-15 00:43:03: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 00:43:03: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 00:43:03: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 00:43:03: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 00:43:03: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 00:43:03: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:43:03: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 00:43:03: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 00:43:03: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:43:03: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:43:03: INFO]: common: created directory at: artifacts
+[2025-06-15 00:43:03: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 00:43:03: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 00:43:03: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 00:43:03: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:49:44: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 00:50:07: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:50:07: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:50:07: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 00:50:07: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 00:50:07: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 00:50:07: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 00:50:07: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 00:50:07: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:50:07: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 00:50:07: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 00:50:07: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 00:50:07: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 00:50:07: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 00:50:07: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:50:07: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 00:50:07: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 00:50:07: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts
+[2025-06-15 00:50:07: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 00:50:07: ERROR]: stage03_data_transformation: Data Transformation stage failed: "'ConfigBox' object has no attribute 'data_path'"
+[2025-06-15 00:50:07: ERROR]: main: "'ConfigBox' object has no attribute 'data_path'"
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 36, in <module>
+    data_transformation.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 15, in main
+    data_transformation_config = config.get_data_transformation_config()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 60, in get_data_transformation_config
+    data_path=config.data_path,
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_path'"
+[2025-06-15 00:53:16: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 00:53:17: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:53:17: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:53:17: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: created directory at: artifacts
+[2025-06-15 00:53:17: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 00:53:17: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 00:53:17: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 00:53:17: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 00:53:17: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 00:53:17: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:53:17: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 00:53:17: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 00:53:17: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: created directory at: artifacts
+[2025-06-15 00:53:17: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 00:53:17: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 00:53:17: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 00:53:17: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:53:17: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 00:53:17: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 00:53:17: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:53:17: INFO]: common: created directory at: artifacts
+[2025-06-15 00:53:17: ERROR]: stage03_data_transformation: Data Transformation stage failed: 'ConfigurationManager' object has no attribute 'get_data_transformation_config'
+[2025-06-15 00:53:17: ERROR]: main: 'ConfigurationManager' object has no attribute 'get_data_transformation_config'
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 36, in <module>
+    data_transformation.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 15, in main
+    data_transformation_config = config.get_data_transformation_config()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_transformation_config'
+[2025-06-15 00:59:18: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 00:59:53: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 00:59:53: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 00:59:53: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:59:53: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:59:53: INFO]: common: created directory at: artifacts
+[2025-06-15 00:59:53: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 00:59:53: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 00:59:53: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 00:59:53: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 00:59:54: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 00:59:54: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:59:54: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 00:59:54: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 00:59:54: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:59:54: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:59:54: INFO]: common: created directory at: artifacts
+[2025-06-15 00:59:54: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 00:59:54: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 00:59:54: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 00:59:54: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 00:59:54: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 00:59:54: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 00:59:54: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 00:59:54: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 00:59:54: INFO]: common: created directory at: artifacts
+[2025-06-15 00:59:54: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 00:59:54: ERROR]: stage03_data_transformation: Data Transformation stage failed: "'ConfigBox' object has no attribute 'root__dir'"
+[2025-06-15 00:59:54: ERROR]: main: "'ConfigBox' object has no attribute 'root__dir'"
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'root__dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root__dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'root__dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root__dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'root__dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'root__dir'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'root__dir'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 36, in <module>
+    data_transformation.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 15, in main
+    data_transformation_config = config.get_data_transformation_config()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 60, in get_data_transformation_config
+    root_dir=config.root__dir,
+             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'root__dir'"
+[2025-06-15 01:04:22: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 01:04:22: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 01:04:22: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 01:04:22: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:04:22: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:04:22: INFO]: common: created directory at: artifacts
+[2025-06-15 01:04:22: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 01:04:22: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 01:04:22: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 01:04:22: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 01:04:23: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 01:04:23: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:04:23: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 01:04:23: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 01:04:23: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:04:23: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:04:23: INFO]: common: created directory at: artifacts
+[2025-06-15 01:04:23: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 01:04:23: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 01:04:23: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 01:04:23: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:04:23: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 01:04:23: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 01:04:23: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:04:23: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:04:23: INFO]: common: created directory at: artifacts
+[2025-06-15 01:04:23: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 01:04:32: INFO]: data_transformation: Loading data from disk...
+[2025-06-15 01:04:34: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 01:04:55: ERROR]: stage03_data_transformation: Data Transformation stage failed: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+[2025-06-15 01:04:55: ERROR]: main: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 36, in <module>
+    data_transformation.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage03_data_transformation.py", line 17, in main
+    data_transformation.convert()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\data_transformation.py", line 40, in convert
+    dataset_pt = dataset.map(self.convert_examples_to_features, batched=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\datasets\arrow_dataset.py", line 557, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\datasets\arrow_dataset.py", line 3079, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\datasets\arrow_dataset.py", line 3525, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\datasets\arrow_dataset.py", line 3475, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\datasets\arrow_dataset.py", line 3398, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\data_transformation.py", line 17, in convert_examples_to_features
+    input_encodings = self.tokenizer(example_batch['dialogue'], max_length=1024, truncation=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\tokenization_utils_base.py", line 2867, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\tokenization_utils_base.py", line 2955, in _call_one
+    return self.batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\tokenization_utils_base.py", line 3156, in batch_encode_plus
+    return self._batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\tokenization_utils_fast.py", line 541, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+[2025-06-15 01:10:15: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 01:10:16: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 01:10:16: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 01:10:16: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 01:10:16: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 01:10:16: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 01:10:16: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 01:10:16: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 01:10:16: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:10:16: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 01:10:16: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 01:10:16: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 01:10:16: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 01:10:16: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 01:10:16: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:10:16: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 01:10:16: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 01:10:16: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts
+[2025-06-15 01:10:16: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 01:10:23: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 01:10:26: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 01:10:27: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 01:10:27: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 01:10:52: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 01:10:52: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 01:10:52: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 01:10:53: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:21:14: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 01:22:19: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 01:22:19: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 01:22:21: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:22:23: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:22:23: INFO]: common: created directory at: artifacts
+[2025-06-15 01:22:23: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 01:22:23: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 01:22:23: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 01:22:23: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 01:22:27: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 01:22:27: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:22:27: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 01:22:27: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 01:22:27: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:22:27: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:22:27: INFO]: common: created directory at: artifacts
+[2025-06-15 01:22:27: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 01:22:27: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 01:22:27: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 01:22:27: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:22:27: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 01:22:27: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 01:22:27: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:22:27: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:22:27: INFO]: common: created directory at: artifacts
+[2025-06-15 01:22:27: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 01:22:55: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 01:23:15: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 01:23:38: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 01:23:38: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 01:24:10: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 01:24:17: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 01:24:17: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 01:24:19: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 01:24:19: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 01:24:19: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 01:24:20: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 01:24:20: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 01:24:20: INFO]: common: created directory at: artifacts
+[2025-06-15 01:24:20: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 01:38:26: ERROR]: stage04_model_training: Model Training stage failed: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-15 01:38:26: ERROR]: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 48, in <module>
+    model_trainer.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 17, in main
+    model_trainer.train()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\model_trainer.py", line 24, in train
+    trainer_args = TrainingArguments(
+                   ^^^^^^^^^^^^^^^^^^
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-15 02:05:22: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 02:05:34: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 02:05:34: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 02:05:34: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:05:34: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:05:34: INFO]: common: created directory at: artifacts
+[2025-06-15 02:05:34: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 02:05:34: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 02:05:34: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 02:05:34: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 02:05:37: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 02:05:37: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:05:37: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 02:05:37: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 02:05:37: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:05:37: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:05:37: INFO]: common: created directory at: artifacts
+[2025-06-15 02:05:37: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 02:05:37: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 02:05:37: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 02:05:37: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:05:37: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 02:05:37: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 02:05:37: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:05:37: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:05:37: INFO]: common: created directory at: artifacts
+[2025-06-15 02:05:37: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 02:05:43: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 02:05:46: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 02:05:47: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 02:05:47: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 02:06:08: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 02:06:08: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 02:06:08: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 02:06:09: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:06:09: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 02:06:09: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 02:06:09: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:06:09: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:06:09: INFO]: common: created directory at: artifacts
+[2025-06-15 02:06:09: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 02:09:07: ERROR]: stage04_model_training: Model Training stage failed: '>' not supported between instances of 'str' and 'int'
+[2025-06-15 02:09:07: ERROR]: main: '>' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 48, in <module>
+    model_trainer.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 17, in main
+    model_trainer.train()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\model_trainer.py", line 25, in train
+    trainer_args = TrainingArguments(
+                   ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 131, in __init__
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\training_args.py", line 1622, in __post_init__
+    if self.save_strategy == SaveStrategy.STEPS and self.save_steps > 1:
+                                                    ^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'int'
+[2025-06-15 02:23:11: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 02:23:22: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 02:23:22: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 02:23:22: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 02:23:22: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 02:23:22: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 02:23:22: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 02:23:22: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 02:23:22: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:23:22: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 02:23:22: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 02:23:22: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 02:23:22: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 02:23:22: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 02:23:22: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:23:22: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 02:23:22: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 02:23:22: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts
+[2025-06-15 02:23:22: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 02:23:28: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 02:23:31: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 02:23:32: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 02:23:32: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 02:23:49: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 02:23:49: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 02:23:49: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 02:23:49: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:23:49: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 02:23:49: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 02:23:49: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:23:49: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:23:49: INFO]: common: created directory at: artifacts
+[2025-06-15 02:23:49: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 02:25:26: ERROR]: stage04_model_training: Model Training stage failed: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-15 02:25:26: ERROR]: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 48, in <module>
+    model_trainer.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 17, in main
+    model_trainer.train()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\model_trainer.py", line 23, in train
+    trainer_args = TrainingArguments(
+                   ^^^^^^^^^^^^^^^^^^
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-06-15 02:32:29: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 02:32:39: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 02:32:39: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 02:32:39: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 02:32:39: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 02:32:39: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 02:32:39: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 02:32:39: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 02:32:39: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:32:39: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 02:32:39: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 02:32:39: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 02:32:39: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 02:32:39: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 02:32:39: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:32:39: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 02:32:39: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 02:32:39: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts
+[2025-06-15 02:32:39: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 02:32:43: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 02:32:45: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 02:32:46: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 02:32:46: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 02:33:04: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 02:33:06: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 02:33:06: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 02:33:07: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:33:07: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 02:33:07: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 02:33:07: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:33:07: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:33:07: INFO]: common: created directory at: artifacts
+[2025-06-15 02:33:07: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 02:33:07: ERROR]: stage04_model_training: Model Training stage failed: "'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'"
+[2025-06-15 02:33:07: ERROR]: main: "'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'"
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'per_device_train_batch_s_ize'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'per_device_train_batch_s_ize'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'per_device_train_batch_s_ize'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'per_device_train_batch_s_ize'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 48, in <module>
+    model_trainer.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 15, in main
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\config\configuration.py", line 79, in get_model_trainer_config
+    per_device_train_batch_size = params.per_device_train_batch_s_ize,
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'per_device_train_batch_s_ize'"
+[2025-06-15 02:36:02: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 02:36:09: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 02:36:09: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 02:36:09: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 02:36:09: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 02:36:09: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 02:36:09: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 02:36:09: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 02:36:09: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:36:09: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 02:36:09: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 02:36:09: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 02:36:09: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 02:36:09: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 02:36:09: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:36:09: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 02:36:09: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 02:36:09: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts
+[2025-06-15 02:36:09: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 02:36:13: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 02:36:16: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 02:36:16: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 02:36:16: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 02:36:32: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 02:36:33: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 02:36:33: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 02:36:33: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:36:33: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 02:36:33: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 02:36:33: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:36:33: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:36:33: INFO]: common: created directory at: artifacts
+[2025-06-15 02:36:33: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 02:40:16: ERROR]: stage04_model_training: Model Training stage failed: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+[2025-06-15 02:40:16: ERROR]: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+Traceback (most recent call last):
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\main.py", line 48, in <module>
+    model_trainer.main()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 21, in main
+    raise e
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\pipeline\stage04_model_training.py", line 17, in main
+    model_trainer.train()
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\src\textSummarizer\components\model_trainer.py", line 23, in train
+    trainer_args = TrainingArguments(
+                   ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 131, in __init__
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\training_args.py", line 1738, in __post_init__
+    self.device
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\training_args.py", line 2268, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\utils\generic.py", line 67, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hemku\OneDrive\Documents\Text_Summarizer_Project\myvenv\Lib\site-packages\transformers\training_args.py", line 2138, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+[2025-06-15 02:49:12: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 02:49:22: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 02:49:22: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 02:49:22: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:49:22: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:49:22: INFO]: common: created directory at: artifacts
+[2025-06-15 02:49:22: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 02:49:22: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 02:49:22: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 02:49:22: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 02:49:23: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 02:49:23: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:49:23: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 02:49:23: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 02:49:23: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:49:23: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:49:23: INFO]: common: created directory at: artifacts
+[2025-06-15 02:49:23: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 02:49:23: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 02:49:23: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 02:49:23: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:49:23: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 02:49:23: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 02:49:23: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:49:23: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:49:23: INFO]: common: created directory at: artifacts
+[2025-06-15 02:49:23: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 02:49:27: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 02:49:29: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 02:49:29: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 02:49:29: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 02:49:45: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 02:49:46: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 02:49:46: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 02:49:46: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 02:49:46: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 02:49:46: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 02:49:46: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 02:49:46: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 02:49:46: INFO]: common: created directory at: artifacts
+[2025-06-15 02:49:46: INFO]: common: created directory at: artifacts/model_trainer
+[2025-06-15 14:59:31: INFO]: config: PyTorch version 2.7.1 available.
+[2025-06-15 14:59:45: INFO]: main: >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-15 14:59:45: INFO]: stage01_data_ingestion: Starting Data Ingestion stage...
+[2025-06-15 14:59:45: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts/data_ingestion
+[2025-06-15 14:59:45: INFO]: stage01_data_ingestion: Downloading data...
+[2025-06-15 14:59:45: INFO]: data_ingestion: File already exists of size: ~7718 KB
+[2025-06-15 14:59:45: INFO]: stage01_data_ingestion: Extracting data...
+[2025-06-15 14:59:45: INFO]: stage01_data_ingestion: Data Ingestion stage completed successfully.
+
+
+[2025-06-15 14:59:45: INFO]: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-15 14:59:45: INFO]: main: >>>>>> stage Data Validation stage started <<<<<<
+[2025-06-15 14:59:45: INFO]: stage02_data_validation: Starting Data Validation stage...
+[2025-06-15 14:59:45: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts/data_validation
+[2025-06-15 14:59:45: INFO]: data_validation: Validation successful. All required files exist.
+[2025-06-15 14:59:45: INFO]: stage02_data_validation: Data Validation stage completed successfully.
+
+
+[2025-06-15 14:59:45: INFO]: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2025-06-15 14:59:45: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<
+[2025-06-15 14:59:45: INFO]: stage03_data_transformation: Starting Data Transformation stage...
+[2025-06-15 14:59:45: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts
+[2025-06-15 14:59:45: INFO]: common: created directory at: artifacts/data_transformation
+[2025-06-15 14:59:48: INFO]: data_transformation: Loading data from CSV files...
+[2025-06-15 14:59:50: INFO]: data_transformation: Filtering out rows with missing 'dialogue' or 'summary'...
+[2025-06-15 14:59:51: INFO]: data_transformation: Original train size: 14732. Cleaned train size: 14731
+[2025-06-15 14:59:51: INFO]: data_transformation: Applying tokenization and converting to features...
+[2025-06-15 15:00:11: INFO]: data_transformation: Saving tokenized data to artifacts/data_transformation\samsum_dataset_tokenized...
+[2025-06-15 15:00:12: INFO]: data_transformation: Data transformation complete.
+[2025-06-15 15:00:12: INFO]: stage03_data_transformation: Data Transformation stage completed successfully.
+
+
+[2025-06-15 15:00:12: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2025-06-15 15:00:12: INFO]: main: >>>>>> stage Model Training stage started <<<<<<
+[2025-06-15 15:00:12: INFO]: stage04_model_training: Starting Model Training stage...
+[2025-06-15 15:00:12: INFO]: common: YAML file config\config.yaml loaded successfully.
+[2025-06-15 15:00:13: INFO]: common: YAML file config\params.yaml loaded successfully.
+[2025-06-15 15:00:13: INFO]: common: created directory at: artifacts
+[2025-06-15 15:00:13: INFO]: common: created directory at: artifacts/model_trainer

@@ -1,0 +1,16 @@
+# This file will hold model training hyperparameters.
+# We will use these in a later stage.
+
+# NEW, CORRECTED PARAMS
+# In config/params.yaml
+# In config/params.yaml
+TRAINING_ARGS:
+  num_train_epochs: 1
+  warmup_steps: 500
+  per_device_train_batch_size: 1
+  weight_decay: 0.01
+  logging_steps: 10
+  do_eval: True               # <-- USE THIS MODERN NAME
+  save_steps: 500000          # <-- USE A PROPER INTEGER
+  gradient_accumulation_steps: 16
+  # Remove evaluation_strategy and eval_steps

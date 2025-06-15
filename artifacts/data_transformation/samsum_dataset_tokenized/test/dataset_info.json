@@ -1,0 +1,75 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "csv",
+  "dataset_size": 10531266,
+  "description": "",
+  "download_checksums": {
+    "C:/Users/Hemku/OneDrive/Documents/Text_Summarizer_Project/artifacts/data_ingestion/samsum-train.csv": {
+      "num_bytes": 9401418,
+      "checksum": null
+    },
+    "C:/Users/Hemku/OneDrive/Documents/Text_Summarizer_Project/artifacts/data_ingestion/samsum-test.csv": {
+      "num_bytes": 530165,
+      "checksum": null
+    },
+    "C:/Users/Hemku/OneDrive/Documents/Text_Summarizer_Project/artifacts/data_ingestion/samsum-validation.csv": {
+      "num_bytes": 512131,
+      "checksum": null
+    }
+  },
+  "download_size": 10443714,
+  "features": {
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "attention_mask": {
+      "feature": {
+        "dtype": "int8",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "labels": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 20974980,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 9480367,
+      "num_examples": 14732,
+      "dataset_name": "csv"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 534480,
+      "num_examples": 819,
+      "dataset_name": "csv"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 516419,
+      "num_examples": 818,
+      "dataset_name": "csv"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
