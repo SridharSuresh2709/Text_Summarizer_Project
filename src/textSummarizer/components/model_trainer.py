@@ -16,8 +16,17 @@ class ModelTrainer:
         model = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
         seq2seq_data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
         
-        # Loading data 
-        dataset_samsum_pt = load_from_disk(self.config.data_path)
+        # --- THE DEFINITIVE FIX ---
+        # Get the absolute path
+        abs_path = os.path.abspath(self.config.data_path)
+        
+        # Prepend the 'file://' protocol to create a URI
+        # This explicitly tells the 'datasets' library to use the local file system
+        data_path_uri = f"file://{abs_path}"
+        
+        print(f"Loading dataset from URI: {data_path_uri}") # For debugging
+        dataset_samsum_pt = load_from_disk(data_path_uri)
+        # --- END OF FIX ---
 
         # This is the corrected version for TrainingArguments
         trainer_args = TrainingArguments(
