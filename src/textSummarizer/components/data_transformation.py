@@ -24,13 +24,15 @@ class DataTransformation:
             'labels': target_encodings['input_ids']
         }
 
-    # This 'convert' method must also be indented to be part of the class
+    # This 'convert' method is also part of the class
     def convert(self):
-        logger.info("Loading data from CSV files...")
-        raw_dataset = load_dataset('csv', data_files={'train': 'artifacts/data_ingestion/samsum-train.csv',
-                                                      'test': 'artifacts/data_ingestion/samsum-test.csv',
-                                                      'validation': 'artifacts/data_ingestion/samsum-validation.csv'})
+        # THE ONLY CHANGE IS HERE:
+        logger.info("Loading data from the Hugging Face Hub cache...")
+        # We load by its name 'samsum', which is passed from the config file.
+        # This will use the already-downloaded version from the cache.
+        raw_dataset = load_dataset(self.config.data_path)
 
+        # ALL OF YOUR CUSTOM LOGIC BELOW REMAINS UNCHANGED
         logger.info("Filtering out rows with missing 'dialogue' or 'summary'...")
 
         # --- IMPORTANT: 'filter_nones' is defined INSIDE 'convert' ---
