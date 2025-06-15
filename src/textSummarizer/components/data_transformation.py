@@ -1,17 +1,17 @@
 # src/textSummarizer/components/data_transformation.py
 
 from transformers import AutoTokenizer
-from datasets import load_dataset
+from datasets import Dataset, DatasetDict
 from textSummarizer.entity import DataTransformationConfig
 from textSummarizer.logging import logger
 import os
+import pandas as pd
 
 class DataTransformation:
     def __init__(self, config: DataTransformationConfig):
         self.config = config
         self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
 
-    # This method is part of the class
     def convert_examples_to_features(self, example_batch):
         input_encodings = self.tokenizer(example_batch['dialogue'], max_length=1024, truncation=True)
 
@@ -24,18 +24,35 @@ class DataTransformation:
             'labels': target_encodings['input_ids']
         }
 
-    # This 'convert' method is also part of the class
     def convert(self):
-        # THE ONLY CHANGE IS HERE:
-        logger.info("Loading data from the Hugging Face Hub cache...")
-        # We load by its name 'samsum', which is passed from the config file.
-        # This will use the already-downloaded version from the cache.
-        raw_dataset = load_dataset(self.config.data_path)
+        # --- THIS IS THE NEW, CORRECTED LOGIC ---
+        logger.info("Loading data from local CSV files...")
+        
+        # Define paths to the CSV files
+        train_path = os.path.join(self.config.data_path, "samsum-train.csv")
+        test_path = os.path.join(self.config.data_path, "samsum-test.csv")
+        validation_path = os.path.join(self.config.data_path, "samsum-validation.csv")
+        
+        # Load CSVs into pandas DataFrames
+        df_train = pd.read_csv(train_path)
+        df_test = pd.read_csv(test_path)
+        df_validation = pd.read_csv(validation_path)
+        
+        # Create Dataset objects from pandas DataFrames
+        train_dataset = Dataset.from_pandas(df_train)
+        test_dataset = Dataset.from_pandas(df_test)
+        validation_dataset = Dataset.from_pandas(df_validation)
+        
+        # Combine them into a single DatasetDict object
+        raw_dataset = DatasetDict({
+            'train': train_dataset,
+            'test': test_dataset,
+            'validation': validation_dataset
+        })
+        # --- END OF NEW LOGIC ---
 
-        # ALL OF YOUR CUSTOM LOGIC BELOW REMAINS UNCHANGED
         logger.info("Filtering out rows with missing 'dialogue' or 'summary'...")
-
-        # --- IMPORTANT: 'filter_nones' is defined INSIDE 'convert' ---
+        
         def filter_nones(example):
             return example['dialogue'] is not None and example['summary'] is not None
         

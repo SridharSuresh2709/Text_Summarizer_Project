@@ -14,7 +14,7 @@ data_validation:
 # In config/config.yaml
 data_transformation:
   root_dir: artifacts/data_transformation
-  data_path: samsum  # <-- ADD THIS LINE
+  data_path: artifact/data_ingestion # <-- ADD THIS LINE
   tokenizer_name: google/pegasus-cnn_dailymail
 
 model_trainer:
